@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Top Level Cryptographic Coprocessor
 
-entity Co_Processor is
+entity crypto_coprocessor is
     port (
         clock  : in std_logic;
         reset  : in std_logic;
@@ -12,9 +12,9 @@ entity Co_Processor is
         Rb     : in std_logic_vector(3 downto 0);
         Rd     : in std_logic_vector(3 downto 0)
     );
-end entity Co_Processor;
+end entity crypto_coprocessor;
 
-architecture rtl of Co_Processor is
+architecture rtl of crypto_coprocessor is
 
     component register_file is
         port (
