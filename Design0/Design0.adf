@@ -1,0 +1,50 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Design0
+
+[Library]
+Design0=.\Design0.lib
+
+[$LibMap$]
+Design0=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files.Data]
+.\src\ALU.vhd=VHDL Source Code
+.\src\shifter.vhd=VHDL Source Code
+.\src\non_linear_lookup.vhd=VHDL Source Code
+.\src\CLU.vhd=VHDL Source Code
+.\src\register.vhd=VHDL Source Code
+.\src\crypto_coprocessor.vhd=VHDL Source Code
+
+[Files]
+/ALU.vhd=-1
+/shifter.vhd=-1
+/non_linear_lookup.vhd=-1
+/register.vhd=-1
+/CLU.vhd=-1
+/crypto_coprocessor.vhd=-1
+
