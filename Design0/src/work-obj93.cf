@@ -1,7 +1,0 @@
-v 4
-file . "ALU_TB.vhd" "b5b4a24ab48602bd17b731d394451a853e619cb0" "20260414054200.367":
-  entity alu_tb at 1( 0) + 0 on 21;
-  architecture rtl of alu_tb at 6( 73) + 0 on 22;
-file . "ALU.vhd" "2643dab182589a9cdb47fe051b58cb461da6a126" "20260414053834.001":
-  entity alu at 1( 0) + 0 on 19;
-  architecture rtl of alu at 17( 390) + 0 on 20;
