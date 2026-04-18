@@ -25,7 +25,7 @@ begin
                ABUS XOR BBUS                                 when "0100",
                NOT ABUS                                      when "0101",
                ABUS                                          when "0110",
-               (others => 'X')                               when others;
+               (others => '0')                               when others;
 
 
 end architecture rtl;
