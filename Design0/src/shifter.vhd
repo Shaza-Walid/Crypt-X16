@@ -1,5 +1,7 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_1164.ALL;	  
+use ieee.numeric_std.all;
+
 
 -- Shifter module
 -- operations: ROR8 ROR4 SLL8
@@ -18,6 +20,26 @@ end entity shifter;
 architecture rtl of shifter is
 begin
 
-    -- TODO
+   case SHIFT_Ctrl is
+
+
+	when "1000" =>
+SHIFTOUT <= std_logic_vector(
+rotate_right(unsigned(SHIFTINPUT),8));
+	
+
+when "1001" =>
+SHIFTOUT <= std_logic_vector(
+rotate_right(unsigned(SHIFTINPUT),4));
+
+	
+when "1010" =>
+SHIFTOUT <= std_logic_vector(
+shift_left(unsigned(SHIFTINPUT),8));
+
+
+	when others =>
+SHIFTOUT <= (others => '0');						 
+	end case;
 
 end architecture rtl;
