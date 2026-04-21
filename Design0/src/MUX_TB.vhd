@@ -6,49 +6,37 @@ end entity;
 
 architecture muxArch of MUX_TB is
 
-signal NLLUT_out: std_logic_vector(15 downto 0) := x"1111";
-signal ALU_out: std_logic_vector(15 downto 0) := x"2222";
+signal LUTOUT: std_logic_vector(15 downto 0) := x"1111";
+signal ALUOUT: std_logic_vector(15 downto 0) := x"2222";
 signal shifter_out: std_logic_vector(15 downto 0) := x"3333";
-signal CTRL: std_logic_vector(3 downto 0);
+signal MUX_SEL: std_logic_vector(1 downto 0);
 signal RESULT: std_logic_vector(15 downto 0);
 
 begin
 	
 	UUT: entity work.mux
 		port map(
-			NLLUT_out => NLLUT_out,
-			ALU_out => ALU_out,
+			LUTOUT => LUTOUT,
+			ALUOUT => ALUOUT,
 			shifter_out => shifter_out,
-			CTRL => CTRL,
+			MUX_SEL => MUX_SEL,
 			RESULT => RESULT
 		);
 		
 simulation_process: process
 					begin
+						
+						MUX_SEL <= "00"; --impossible case
+						wait for 50 ns;	
+						
+						MUX_SEL <= "01"; --ALU output
+						wait for 50 ns;
 					
-						CTRL <= "0000"; --ALU output1 (CTRL(3) = 0)
-						wait for 20 ns;
-
-						CTRL <= "0101"; --ALU output2
-						wait for 20 ns;
+						MUX_SEL <= "10"; --shifter output
+						wait for 50 ns;
 					
-						CTRL <= "0011"; --ALU output3
-						wait for 20 ns;
-					
-						CTRL <= "0100";	--ALU output4
-						wait for 20 ns;
-					
-						CTRL <= "1000"; --shifter output1
-						wait for 20 ns;
-					
-						CTRL <= "1001";	--shifter output2
-						wait for 20 ns;
-					
-						CTRL <= "1010";	--shifter output3
-						wait for 20 ns;
-					
-						CTRL <= "1011";	--NLLUT output
-						wait for 20 ns;
+						MUX_SEL <= "11"; --LUT output
+						wait for 50 ns;
 					
 					wait;
 					
