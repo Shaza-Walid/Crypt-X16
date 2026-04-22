@@ -14,10 +14,8 @@ architecture rtl of non_linear_lookup is
     -- Split signals
     signal upper_byte : std_logic_vector(7 downto 0); -- unchanged part
     signal lower_byte : std_logic_vector(7 downto 0); -- part to process
-
     signal MSN_in, LSN_in   : std_logic_vector(3 downto 0);
     signal MSN_out, LSN_out : std_logic_vector(3 downto 0);
-
     signal lut_out : std_logic_vector(7 downto 0); --the output of s-boxes
 
 	begin
