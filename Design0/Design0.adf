@@ -28,7 +28,7 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=clu_mux_tb|sim|0 clu_tb|sim|0 mux_tb|sim|0 non_linear_lookup_tb|sim|0 register_file|rtl|0 register_file_tb|behavioral|0 
+HierarchyInformation=register_file_tb|behavioral|0  
 ShowHide=ShowTopLevel
 Selected=
 
