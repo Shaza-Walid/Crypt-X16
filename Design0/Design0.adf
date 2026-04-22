@@ -28,7 +28,9 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=register_file_tb|behavioral|0
+HierarchyInformation=clu_mux_tb|sim|0 clu_tb|sim|0  
+ShowHide=ShowTopLevel
+Selected=
 
 [ORDER]
 Synchronize=1
@@ -44,6 +46,9 @@ Synchronize=1
 /shifter_TB.vhd=-1
 /register_file_TB.vhd=-1
 work/work.lib=-1
+/MUX.vhd=-1
+/CLU_TB.vhd=-1
+/CLU_MUX_TB.vhd=-1
 
 [Files.Data]
 .\src\ALU.vhd=VHDL Source Code
@@ -56,4 +61,7 @@ work/work.lib=-1
 .\src\shifter_TB.vhd=VHDL Source Code
 .\src\register_file_TB.vhd=VHDL Source Code
 .\src\work\work.lib=External File
+.\src\MUX.vhd=VHDL Source Code
+.\src\CLU_TB.vhd=VHDL Source Code
+.\src\CLU_MUX_TB.vhd=VHDL Source Code
 

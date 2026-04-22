@@ -6,36 +6,36 @@ end entity;
 
 architecture muxArch of MUX_TB is
 
-signal LUTOUT: std_logic_vector(15 downto 0) := x"1111";
-signal ALUOUT: std_logic_vector(15 downto 0) := x"2222";
-signal shifter_out: std_logic_vector(15 downto 0) := x"3333";
-signal MUX_SEL: std_logic_vector(1 downto 0);
-signal RESULT: std_logic_vector(15 downto 0);
+signal LUT_OUT: std_logic_vector(15 downto 0) := x"1111";
+signal ALU_OUT: std_logic_vector(15 downto 0) := x"2222";
+signal SHIFT_OUT: std_logic_vector(15 downto 0) := x"3333";
+signal SEL: std_logic_vector(1 downto 0);
+signal MUX_OUT: std_logic_vector(15 downto 0);
 
 begin
 	
-	UUT: entity work.mux
+	UUT: entity MUX
 		port map(
-			LUTOUT => LUTOUT,
-			ALUOUT => ALUOUT,
-			shifter_out => shifter_out,
-			MUX_SEL => MUX_SEL,
-			RESULT => RESULT
+			LUT_OUT => LUT_OUT,
+			ALU_OUT => ALU_OUT,
+			SHIFT_OUT => SHIFT_OUT,
+			SEL => SEL,
+			MUX_OUT => MUX_OUT
 		);
 		
 simulation_process: process
 					begin
 						
-						MUX_SEL <= "00"; --impossible case
+						SEL <= "00"; --impossible case
 						wait for 50 ns;	
 						
-						MUX_SEL <= "01"; --ALU output
+						SEL <= "01"; --ALU output
 						wait for 50 ns;
 					
-						MUX_SEL <= "10"; --shifter output
+						SEL <= "10"; --shifter output
 						wait for 50 ns;
 					
-						MUX_SEL <= "11"; --LUT output
+						SEL <= "11"; --LUT output
 						wait for 50 ns;
 					
 					wait;
