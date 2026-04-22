@@ -18,17 +18,15 @@ architecture sim of CLU_TB is
 	
 	    process
 	    begin
-	        -- ALU ADD
-	        A_BUS <= x"0005";
-	        B_BUS <= x"0003";
-	        CTRL  <= "0000"; wait for 10 ns;
-	        -- ALU AND
-	        CTRL  <= "0010"; wait for 10 ns;
-	        -- SHIFT
-	        CTRL  <= "1000"; wait for 10 ns;
-	        -- LUT
-	        CTRL  <= "1011"; wait for 10 ns;
-			--End simulation
+	        A_BUS <= x"0004";
+	        B_BUS <= x"0002";
+	        CTRL  <= "0000"; wait for 10 ns; -- ADD
+	        CTRL  <= "0001"; wait for 10 ns; -- SUB
+	        CTRL  <= "0010"; wait for 10 ns; -- AND
+	        CTRL  <= "0011"; wait for 10 ns; -- OR
+	        CTRL  <= "1000"; wait for 10 ns; -- SHIFT
+	        CTRL  <= "1011"; wait for 10 ns; -- LUT
+			--End Simulation
 	        wait;
 	    end process;
 
