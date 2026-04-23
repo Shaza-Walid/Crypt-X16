@@ -15,10 +15,6 @@ end entity;
 
 architecture rtl of CLU is
 
-	--conmponents declaration
-    component ALU is
-	    port (
-	        ABUS    : in  std_logic_vector(15 downto 0);
     -- Internal Control Signals
     signal ALUctrl    : std_logic_vector(2 downto 0);
     signal SHIFTctrl  : std_logic_vector(1 downto 0);
