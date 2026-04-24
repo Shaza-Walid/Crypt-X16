@@ -35,8 +35,6 @@ architecture rtl of register_file is
 			if rising_edge(clock) then
 				if reset = '1' then
 					registers <= (others => (others => '0'));
-					SRCa      <= (others => '0');
-                	SRCb      <= (others => '0');
 				-- Write Operation
 				-- Occurs ONLY if Write Enable is active
 				-- Writes RES value into register Rd      
