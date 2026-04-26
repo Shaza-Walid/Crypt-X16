@@ -28,44 +28,54 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=register_file_tb|sim|0     
+HierarchyInformation=crypto_coprocessor_tb|sim|0 register_file_tb|sim|0
 ShowHide=ShowTopLevel
 Selected=
 
 [ORDER]
 Synchronize=1
 
-[Files]
-/ALU.vhd=-1
-/ALU_TB.vhd=-1
-/non_linear_lookup.vhd=-1
-/non_linear_lookup_TB.vhd=-1
-/shifter.vhd=-1
-/shifter_TB.vhd=-1
-/MUX.vhd=-1
-/MUX_TB.vhd=-1
-/Control_Logic.vhd=-1
-/Control_Logic_TB.vhd=-1
-/CLU.vhd=-1
-/CLU_TB.vhd=-1
-/register_file.vhd=-1
-/register_file_TB.vhd=-1
-/crypto_coprocessor.vhd=-1
-
 [Files.Data]
-.\src\ALU.vhd=VHDL Source Code
-.\src\ALU_TB.vhd=VHDL Source Code
-.\src\non_linear_lookup.vhd=VHDL Source Code
-.\src\non_linear_lookup_TB.vhd=VHDL Source Code
-.\src\shifter.vhd=VHDL Source Code
-.\src\shifter_TB.vhd=VHDL Source Code
-.\src\MUX.vhd=VHDL Source Code
-.\src\MUX_TB.vhd=VHDL Source Code
-.\src\Control_Logic.vhd=VHDL Source Code
-.\src\Control_Logic_TB.vhd=VHDL Source Code
-.\src\CLU.vhd=VHDL Source Code
-.\src\CLU_TB.vhd=VHDL Source Code
-.\src\register_file.vhd=VHDL Source Code
-.\src\register_file_TB.vhd=VHDL Source Code
-.\src\crypto_coprocessor.vhd=VHDL Source Code
+.\src\Components\ALU.vhd=VHDL Source Code
+.\src\Components\non_linear_lookup.vhd=VHDL Source Code
+.\src\Components\shifter.vhd=VHDL Source Code
+.\src\Components\MUX.vhd=VHDL Source Code
+.\src\Components\Control_Logic.vhd=VHDL Source Code
+.\src\Components\CLU.vhd=VHDL Source Code
+.\src\Components\register_file.vhd=VHDL Source Code
+.\src\Components\input_reg.vhd=VHDL Source Code
+.\src\Components\crypto_coprocessor.vhd=VHDL Source Code
+.\src\TestBenches\ALU_TB.vhd=VHDL Source Code
+.\src\TestBenches\CLU_TB.vhd=VHDL Source Code
+.\src\TestBenches\Control_Logic_TB.vhd=VHDL Source Code
+.\src\TestBenches\crypto_coprocessor_TB.vhd=VHDL Source Code
+.\src\TestBenches\input_reg_TB.vhd=VHDL Source Code
+.\src\TestBenches\MUX_TB.vhd=VHDL Source Code
+.\src\TestBenches\non_linear_lookup_TB.vhd=VHDL Source Code
+.\src\TestBenches\register_file_TB.vhd=VHDL Source Code
+.\src\TestBenches\shifter_TB.vhd=VHDL Source Code
+
+[Groups]
+Components=1
+TestBenches=1
+
+[Files]
+Components/ALU.vhd=-1
+Components/non_linear_lookup.vhd=-1
+Components/shifter.vhd=-1
+Components/MUX.vhd=-1
+Components/Control_Logic.vhd=-1
+Components/CLU.vhd=-1
+Components/register_file.vhd=-1
+Components/input_reg.vhd=-1
+Components/crypto_coprocessor.vhd=-1
+TestBenches/ALU_TB.vhd=-1
+TestBenches/non_linear_lookup_TB.vhd=-1
+TestBenches/shifter_TB.vhd=-1
+TestBenches/MUX_TB.vhd=-1
+TestBenches/Control_Logic_TB.vhd=-1
+TestBenches/CLU_TB.vhd=-1
+TestBenches/register_file_TB.vhd=-1
+TestBenches/input_reg_TB.vhd=-1
+TestBenches/crypto_coprocessor_TB.vhd=-1
 
